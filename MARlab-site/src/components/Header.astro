@@ -1,0 +1,83 @@
+---
+import LogoSlot from "./LogoSlot.astro";
+
+const base = import.meta.env.BASE_URL;
+const nav = [
+  { href: "about/", label: "About" },
+  { href: "research/", label: "Research" },
+  { href: "people/", label: "People" },
+  { href: "publications/", label: "Publications" },
+  { href: "software/", label: "Software" },
+  { href: "contact/", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+function isActive(href: string) {
+  const full = `${base}${href}`;
+  return currentPath === full || currentPath === full.replace(/\/$/, "");
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-[var(--color-line)] bg-[var(--color-paper)]/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+    <a href={base} class="flex items-center gap-3 no-underline">
+      <LogoSlot initials="LMRA" alt="Lab logo" size="sm" />
+      <LogoSlot initials="UN" alt="Universidad del Norte logo" size="sm" />
+      <span class="ml-1 font-display text-[0.95rem] font-medium leading-tight text-[var(--color-ink)]">
+        Mechatronics &amp; Applied<br class="hidden sm:block" /> Robotics Lab
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Primary">
+      {nav.map((item) => (
+        <a
+          href={`${base}${item.href}`}
+          class:list={[
+            "font-mono text-[0.78rem] uppercase tracking-wide transition-colors",
+            isActive(item.href)
+              ? "text-[var(--color-accent-ink)]"
+              : "text-[var(--color-ink-soft)] hover:text-[var(--color-accent-ink)]",
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <button
+      id="menu-toggle"
+      class="flex flex-col gap-1.5 md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="h-[1.5px] w-6 bg-[var(--color-ink)]"></span>
+      <span class="h-[1.5px] w-6 bg-[var(--color-ink)]"></span>
+      <span class="h-[1.5px] w-6 bg-[var(--color-ink)]"></span>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="hidden border-t border-[var(--color-line)] px-6 py-3 md:hidden" aria-label="Mobile">
+    <ul class="flex flex-col gap-3">
+      {nav.map((item) => (
+        <li>
+          <a
+            href={`${base}${item.href}`}
+            class="font-mono text-sm uppercase tracking-wide text-[var(--color-ink-soft)]"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  toggle?.addEventListener("click", () => {
+    const isOpen = mobileNav?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { getCollection } from "astro:content";
+
+const research = (await getCollection("research")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Research" description="Research lines of the Laboratorio de Mecatrónica y Robótica Aplicada: biomedical, agricultural, and applied robotics.">
+  <PageIntro
+    eyebrow="Research Areas"
+    title="Three lines, one mechatronics stack"
+    intro="Each line shares the same underlying capabilities in mechanism design, control, and sensing, applied to a different deployment context. This list will grow as new projects and partnerships start."
+  />
+
+  <section class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+    <div class="flex flex-col divide-y divide-[var(--color-line)]">
+      {research.map((r, i) => (
+        <article class="grid gap-4 py-10 first:pt-0 md:grid-cols-[auto_1fr] md:gap-10">
+          <div class="flex items-start gap-4 md:w-40">
+            <span class="font-mono text-sm text-[var(--color-ink-faint)]">{String(i + 1).padStart(2, "0")}</span>
+            <span class="eyebrow">{r.data.tag}</span>
+          </div>
+          <div class="max-w-2xl">
+            <h2 class="font-display text-2xl font-medium text-[var(--color-ink)]">{r.data.title}</h2>
+            <p class="mt-3 text-[1rem] leading-relaxed text-[var(--color-ink-soft)]">{r.data.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

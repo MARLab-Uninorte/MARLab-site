@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  authors: string;
+  venue: string;
+  year: number;
+  link?: string;
+  tags?: string[];
+}
+const { title, authors, venue, year, link, tags = [] } = Astro.props;
+---
+
+<article class="flex flex-col gap-2 border-b border-[var(--color-line)] py-6 first:pt-0">
+  <div class="flex items-baseline justify-between gap-4">
+    <h3 class="font-display text-lg font-medium text-[var(--color-ink)]">
+      {link ? <a href={link} class="hover:text-[var(--color-accent-ink)]" target="_blank" rel="noopener noreferrer">{title}</a> : title}
+    </h3>
+    <span class="shrink-0 font-mono text-sm text-[var(--color-ink-faint)]">{year}</span>
+  </div>
+  <p class="text-sm text-[var(--color-ink-soft)]">{authors}</p>
+  <p class="text-sm italic text-[var(--color-ink-faint)]">{venue}</p>
+  {tags.length > 0 && (
+    <div class="mt-1 flex flex-wrap gap-2">
+      {tags.map((t) => (
+        <span class="rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide text-[var(--color-accent-ink)]">
+          {t}
+        </span>
+      ))}
+    </div>
+  )}
+</article>

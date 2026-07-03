@@ -1,0 +1,34 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  repoUrl?: string;
+  tags?: string[];
+}
+const { name, description, repoUrl, tags = [] } = Astro.props;
+---
+
+<div class="flex flex-col border border-[var(--color-line)] bg-[var(--color-paper)] p-6">
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="font-mono text-base font-medium text-[var(--color-ink)]">{name}</h3>
+    {repoUrl && (
+      <a
+        href={repoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 font-mono text-xs text-[var(--color-accent-ink)] hover:underline"
+        aria-label={`View ${name} on GitHub`}
+      >
+        View repo →
+      </a>
+    )}
+  </div>
+  <p class="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-ink-soft)]">{description}</p>
+  {tags.length > 0 && (
+    <div class="mt-4 flex flex-wrap gap-2">
+      {tags.map((t) => (
+        <span class="font-mono text-[0.65rem] uppercase tracking-wide text-[var(--color-ink-faint)]">#{t}</span>
+      ))}
+    </div>
+  )}
+</div>

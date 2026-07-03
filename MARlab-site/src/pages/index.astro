@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkageMotif from "../components/LinkageMotif.astro";
+import ResearchCard from "../components/ResearchCard.astro";
+import { getCollection } from "astro:content";
+
+const base = import.meta.env.BASE_URL;
+const research = (await getCollection("research")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-[var(--color-line)]">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
+      <div>
+        <p class="eyebrow">Universidad del Norte &middot; Barranquilla, Colombia</p>
+        <h1 class="mt-4 font-display text-4xl font-medium leading-[1.1] text-[var(--color-ink)] md:text-5xl">
+          Laboratorio de Mecatrónica<br />y Robótica Aplicada
+        </h1>
+        <p class="mt-6 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-ink-soft)]">
+          We design and build robotic systems for biomedicine, agriculture, and industrial automation,
+          from early-stage mechanism design to field-tested prototypes.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href={`${base}research/`}
+            class="border border-[var(--color-ink)] px-5 py-2.5 font-mono text-xs uppercase tracking-wide text-[var(--color-ink)] transition-colors hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)]"
+          >
+            View Research
+          </a>
+          <a
+            href={`${base}contact/`}
+            class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)] hover:underline"
+          >
+            Get in touch →
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block" aria-hidden="true">
+        <LinkageMotif class="mx-auto h-auto w-full max-w-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Mission -->
+  <section id="about" class="border-b border-[var(--color-line)]">
+    <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1fr_2fr] md:py-20">
+      <p class="eyebrow">About &amp; Mission</p>
+      <div class="max-w-2xl">
+        <p class="font-display text-2xl leading-snug text-[var(--color-ink)] md:text-3xl">
+          We build robots that solve problems specific to the Colombian Caribbean,
+          in clinics, in the field, and in industry.
+        </p>
+        <p class="mt-6 text-[1rem] leading-relaxed text-[var(--color-ink-soft)]">
+          Led by Javier Darío Sanjuán De Caro at Universidad del Norte, the lab works across the full
+          mechatronics stack: mechanism design, embedded control, sensing, and autonomy. Our projects
+          are grounded in real deployment contexts, from assistive devices to autonomous field platforms,
+          and we collaborate closely with clinical, agricultural, and industrial partners across the region.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research summary -->
+  <section class="border-b border-[var(--color-line)] bg-[var(--color-paper-dim)]">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">Research Areas</p>
+          <h2 class="mt-3 font-display text-3xl font-medium text-[var(--color-ink)]">What we work on</h2>
+        </div>
+        <a href={`${base}research/`} class="hidden font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)] hover:underline md:block">
+          All research →
+        </a>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        {research.map((r, i) => (
+          <ResearchCard tag={r.data.tag} title={r.data.title} text={r.data.summary} index={i + 1} href={`${base}research/`} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section>
+    <div class="mx-auto grid max-w-6xl gap-6 px-6 py-16 md:grid-cols-3 md:py-20">
+      <a href={`${base}people/`} class="border border-[var(--color-line)] p-6 no-underline transition-colors hover:border-[var(--color-accent)]">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)]">Meet the team</p>
+        <p class="mt-2 font-display text-lg text-[var(--color-ink)]">People →</p>
+      </a>
+      <a href={`${base}publications/`} class="border border-[var(--color-line)] p-6 no-underline transition-colors hover:border-[var(--color-accent)]">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)]">Read our work</p>
+        <p class="mt-2 font-display text-lg text-[var(--color-ink)]">Publications →</p>
+      </a>
+      <a href={`${base}software/`} class="border border-[var(--color-line)] p-6 no-underline transition-colors hover:border-[var(--color-accent)]">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)]">Use our tools</p>
+        <p class="mt-2 font-display text-lg text-[var(--color-ink)]">Open Source →</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
