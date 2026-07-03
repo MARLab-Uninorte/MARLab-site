@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+---
+
+<BaseLayout title="Contact" description="Get in touch with the Laboratorio de Mecatrónica y Robótica Aplicada at Universidad del Norte.">
+  <PageIntro
+    eyebrow="Contact"
+    title="Get in touch"
+    intro="For research collaborations, student inquiries, or partnership proposals, reach out through any of the channels below."
+  />
+
+  <section class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-2 md:py-20">
+    <div class="space-y-8">
+      <div>
+        <p class="eyebrow">Email</p>
+        <a href="mailto:lmra@uninorte.edu.co" class="mt-2 block font-display text-xl text-[var(--color-ink)] hover:text-[var(--color-accent-ink)]">
+          lmra@uninorte.edu.co
+        </a>
+      </div>
+      <div>
+        <p class="eyebrow">Address</p>
+        <p class="mt-2 text-[var(--color-ink-soft)]">
+          Universidad del Norte<br />
+          Km 5 Vía Puerto Colombia<br />
+          Barranquilla, Atlántico, Colombia
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Lab Director</p>
+        <p class="mt-2 text-[var(--color-ink-soft)]">Javier Darío Sanjuán De Caro</p>
+      </div>
+    </div>
+
+    <!--
+      No backend on GitHub Pages, so this form submits via mailto: as a safe default.
+      To get real form submissions without a server, swap the <form> action for a
+      service like Formspree (https://formspree.io) -- static-friendly, ~5 min setup.
+    -->
+    <form
+      action="mailto:lmra@uninorte.edu.co"
+      method="post"
+      enctype="text/plain"
+      class="flex flex-col gap-4 border border-[var(--color-line)] p-6"
+    >
+      <div class="flex flex-col gap-1.5">
+        <label for="name" class="font-mono text-xs uppercase tracking-wide text-[var(--color-ink-soft)]">Name</label>
+        <input id="name" name="name" type="text" required class="border border-[var(--color-line)] bg-[var(--color-paper)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]" />
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="email" class="font-mono text-xs uppercase tracking-wide text-[var(--color-ink-soft)]">Email</label>
+        <input id="email" name="email" type="email" required class="border border-[var(--color-line)] bg-[var(--color-paper)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]" />
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="message" class="font-mono text-xs uppercase tracking-wide text-[var(--color-ink-soft)]">Message</label>
+        <textarea id="message" name="message" rows="5" required class="border border-[var(--color-line)] bg-[var(--color-paper)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]"></textarea>
+      </div>
+      <button
+        type="submit"
+        class="mt-2 self-start border border-[var(--color-ink)] px-5 py-2.5 font-mono text-xs uppercase tracking-wide text-[var(--color-ink)] transition-colors hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)]"
+      >
+        Send message
+      </button>
+    </form>
+  </section>
+</BaseLayout>

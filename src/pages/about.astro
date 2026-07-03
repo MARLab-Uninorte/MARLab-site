@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="About" description="Mission and background of the Laboratorio de Mecatrónica y Robótica Aplicada at Universidad del Norte.">
+  <PageIntro
+    eyebrow="About & Mission"
+    title="Robotics grounded in the Caribbean context"
+    intro="The Laboratorio de Mecatrónica y Robótica Aplicada (LMRA) develops robotic systems that respond to real needs in clinical care, agriculture, and industry across Colombia's Caribbean region."
+  />
+
+  <section class="mx-auto max-w-3xl px-6 py-16 md:py-20">
+    <div class="space-y-6 text-[1.05rem] leading-relaxed text-[var(--color-ink-soft)]">
+      <p>
+        Based at Universidad del Norte in Barranquilla, the lab works across the full mechatronics
+        stack: mechanism design, embedded control, sensing, and autonomy, to move projects from
+        early prototypes to systems tested in real deployment conditions.
+      </p>
+      <p>
+        Our mission is to build robotic solutions that are directly useful to the communities and
+        industries around us: assistive and rehabilitation devices for clinical partners, autonomous
+        platforms for agricultural monitoring, and automation systems for regional industry.
+      </p>
+      <p>
+        We collaborate with clinical, agricultural, and industrial partners, and we publish our
+        research and, where possible, our tools as open source.
+      </p>
+    </div>
+
+    <div class="mt-14 border-t border-[var(--color-line)] pt-10">
+      <p class="eyebrow">Lab Director</p>
+      <h2 class="mt-3 font-display text-2xl font-medium text-[var(--color-ink)]">
+        Javier Darío Sanjuán De Caro
+      </h2>
+      <p class="mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-ink-soft)]">
+        Principal Investigator and Director of the Laboratorio de Mecatrónica y Robótica Aplicada.
+        Full academic background and CV to be added. See the <a class="text-[var(--color-accent-ink)] hover:underline" href={`${base}people/`}>People</a> page for the full team.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

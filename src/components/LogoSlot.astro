@@ -1,0 +1,26 @@
+---
+// ─────────────────────────────────────────────────────────────────────────
+// LogoSlot -- placeholder mark until real logo files are supplied.
+//
+// TO REPLACE WITH A REAL LOGO:
+// 1. Drop the file in /public/logos/ (e.g. /public/logos/lmra-mark.svg)
+// 2. Replace the <div class="logo-slot..."> block below with:
+//      <img src={`${import.meta.env.BASE_URL}logos/lmra-mark.svg`} alt={alt} class="h-9 w-auto" />
+// ─────────────────────────────────────────────────────────────────────────
+interface Props {
+  initials: string;
+  alt: string;
+  size?: "sm" | "md";
+}
+const { initials, alt, size = "md" } = Astro.props;
+const dims = size === "sm" ? "h-8 w-8 text-[10px]" : "h-10 w-10 text-xs";
+---
+
+<div
+  class={`logo-slot ${dims} flex items-center justify-center rounded-full border border-dashed border-[var(--color-ink-faint)] font-mono font-medium tracking-tight text-[var(--color-ink-soft)]`}
+  role="img"
+  aria-label={alt}
+  title={`${alt} -- logo placeholder`}
+>
+  {initials}
+</div>
