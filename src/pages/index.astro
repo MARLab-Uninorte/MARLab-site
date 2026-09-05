@@ -10,6 +10,11 @@ const research = (await getCollection("research")).sort((a, b) => a.data.order -
 <BaseLayout title="Home">
   <!-- Hero -->
   <section class="relative overflow-hidden border-b border-[var(--color-line)]">
+    <div
+      class="pointer-events-none absolute inset-0"
+      style="background-image: radial-gradient(circle at 78% 25%, var(--color-accent-soft) 0%, transparent 55%), radial-gradient(var(--color-line) 1px, transparent 1px); background-size: 100% 100%, 28px 28px; background-position: 0 0, 0 0; opacity: 0.7;"
+      aria-hidden="true"
+    ></div>
     <div class="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
       <div>
         <p class="eyebrow">Universidad del Norte &middot; Barranquilla, Colombia</p>

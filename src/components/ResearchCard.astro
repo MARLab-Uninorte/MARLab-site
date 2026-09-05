@@ -8,17 +8,28 @@ interface Props {
 }
 const { tag, title, text, index, href } = Astro.props;
 const Tag = href ? "a" : "div";
+
+// Color-code the three research lines instead of a single flat accent --
+// gives each area an identity while keeping the same restrained system.
+const palette = [
+  { ink: "var(--color-accent-ink)", line: "var(--color-accent)" },
+  { ink: "var(--color-line-green-ink)", line: "var(--color-line-green)" },
+  { ink: "var(--color-line-amber-ink)", line: "var(--color-line-amber)" },
+];
+const c = palette[(index - 1) % palette.length];
 ---
 
 <Tag
   href={href}
+  style={`--card-accent-ink: ${c.ink}; --card-accent-line: ${c.line};`}
   class:list={[
-    "group relative flex flex-col border border-[var(--color-line)] bg-[var(--color-paper)] p-7 no-underline transition-colors",
-    href && "hover:border-[var(--color-accent)]",
+    "group relative flex flex-col overflow-hidden border border-[var(--color-line)] bg-[var(--color-paper)] p-7 no-underline transition-colors",
+    href && "hover:border-[var(--card-accent-line)]",
   ]}
 >
+  <span class="absolute inset-x-0 top-0 h-[3px] bg-[var(--card-accent-line)]" aria-hidden="true"></span>
   <div class="flex items-center gap-2">
-    <span class="font-mono text-[0.7rem] tracking-wide text-[var(--color-accent-ink)]">{tag}</span>
+    <span class="font-mono text-[0.7rem] tracking-wide text-[var(--card-accent-ink)]">{tag}</span>
     <span class="h-px flex-1 bg-[var(--color-line)]"></span>
     <span class="font-mono text-[0.7rem] text-[var(--color-ink-faint)]">{String(index).padStart(2, "0")}</span>
   </div>

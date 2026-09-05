@@ -13,7 +13,7 @@
 @theme {
   /* Paper / ink -- cool graphite academic palette (not the AI-default cream+terracotta) */
   --color-paper: #FAFAF8;
-  --color-paper-dim: #F1F2F0;
+  --color-paper-dim: #EAF2F4;
   --color-ink: #14181C;
   --color-ink-soft: #4B5560;
   --color-ink-faint: #8B939A;
@@ -23,6 +23,15 @@
   --color-accent: #1C6E8C;
   --color-accent-ink: #0F3F52;
   --color-accent-soft: #E4EEF1;
+
+  /* Research-line accents -- one warm, one cool-green, alongside the circuit-blue,
+     used to color-code the three research areas instead of a single flat tone */
+  --color-line-green: #3E7D53;
+  --color-line-green-ink: #295938;
+  --color-line-green-soft: #E4F0E7;
+  --color-line-amber: #B8791C;
+  --color-line-amber-ink: #7A5112;
+  --color-line-amber-soft: #F5E9D6;
 
   --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
