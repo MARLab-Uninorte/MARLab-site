@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import LinkageMotif from "../components/LinkageMotif.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import { getCollection } from "astro:content";
 
@@ -36,8 +35,15 @@ const research = (await getCollection("research")).sort((a, b) => a.data.order -
           </a>
         </div>
       </div>
-      <div class="hidden md:block" aria-hidden="true">
-        <LinkageMotif class="mx-auto h-auto w-full max-w-md" />
+      <div class="hidden md:flex md:justify-center" aria-hidden="true">
+        <img
+          src={`${base}images/robot-hero.png`}
+          alt=""
+          class="mx-auto h-auto w-full max-w-md object-contain drop-shadow-xl"
+          width="1221"
+          height="1053"
+          loading="eager"
+        />
       </div>
     </div>
   </section>
