@@ -1,5 +1,29 @@
-name: "Team Member 4"
-role: "Role to be announced"
-bio: "Profile coming soon. This seat is reserved for an upcoming team member -- replace this file's fields with their name, role, and bio once confirmed."
-placeholder: true
+name: "Ricardo Adolfo Caraballo Ibarra"
+role: "Undergraduate Researcher, Mechanical Engineering"
+bio: >-
+  Ricardo Caraballo is a Mechanical Engineering student at Universidad del Norte
+  whose research focuses on robot learning, robotic manipulation, and physics-based
+  simulation. He currently conducts research within MARLab under the supervision of
+  Javier Darío Sanjuan De Caro, contributing to the development of AIRA, a
+  seven-degree-of-freedom robotic manipulator designed and manufactured at
+  Universidad del Norte.
+
+
+  As part of the AIRA project, he developed the robot's complete URDF-based digital
+  representation from its CAD assembly and actuator specifications, including
+  visual and collision geometries, joint frames, inertial properties, and actuator
+  limits. He integrated the model into the Drake robotics framework, performed
+  forward-kinematics validation, and adapted a differential inverse-kinematics
+  controller and pick-and-place pipeline to the AIRA platform.
+
+
+  His main scientific work currently centers on a scoping review of behavior
+  cloning for physical robotic manipulation, examining how human demonstrations,
+  sensing configurations, action representations, learning architectures,
+  computational resources, and robot embodiments are combined to produce autonomous
+  manipulation policies. The study follows PRISMA-ScR methodology and is intended
+  to support future learning-from-demonstration experiments on AIRA.
+photo: "team/ricardo-caraballo.jpg"
+placeholder: false
+isPI: false
 order: 4
