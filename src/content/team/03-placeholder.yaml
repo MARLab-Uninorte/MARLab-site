@@ -1,5 +1,22 @@
-name: "Team Member 3"
-role: "Role to be announced"
-bio: "Profile coming soon. This seat is reserved for an upcoming team member -- replace this file's fields with their name, role, and bio once confirmed."
-placeholder: true
+name: "Otto Alfonso Sierra Meléndez"
+role: "M.S. Student, Biomedical Engineering"
+bio: >-
+  Otto Alfonso Sierra Meléndez is a Mechanical Engineer currently pursuing an M.S. in
+  Biomedical Engineering. His research interests include robotics, biomechanics,
+  control, human–robot interaction, mechanical design, prosthetics, and exoskeletons.
+
+
+  His current research focuses on the development of a kinematic control algorithm
+  for a seven-degree-of-freedom robotic manipulator intended for assistive
+  applications. Using Drake and optimization-based inverse kinematics methods, his
+  work focuses on incorporating safety constraints while maintaining reliable
+  latency for real-time implementation. His work also includes virtual modeling,
+  experimental validation, and integration with the physical actuators.
+
+
+  He is particularly interested in the development of robotic and biomechanical
+  systems that combine mechanical design, control, and human-centered applications.
+photo: "team/otto-sierra.jpg"
+placeholder: false
+isPI: false
 order: 3
