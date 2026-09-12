@@ -1,5 +1,23 @@
-name: "Team Member 2"
-role: "Role to be announced"
-bio: "Profile coming soon. This seat is reserved for an upcoming team member -- replace this file's fields with their name, role, and bio once confirmed."
-placeholder: true
+name: "Juan David Díaz Fernández"
+role: "M.S. Student, Mechanical Engineering"
+bio: >-
+  Tenth-semester Mechanical Engineering student currently enrolled in a combined
+  undergraduate–graduate program, with a focus on robotics. His background combines
+  mechanical design, Python programming, data analysis, and simulation tools such as
+  ANSYS, along with a particular interest in control systems, instrumentation, and
+  automation. Throughout his academic training, he has participated in research
+  initiatives and academic projects focused on applying engineering tools to
+  real-world problems.
+
+
+  He is currently conducting research in robotics for self-driving laboratories,
+  exploring how robotic systems can autonomously perform experimental tasks that
+  traditionally require human intervention. His work focuses particularly on robotic
+  manipulation using robotic arms, with the goal of enabling a robot to reliably
+  perform twisting-lid tasks, such as opening and closing threaded caps. This research
+  aims to contribute to the development of more automated, reproducible, and adaptable
+  experimental processes in laboratory environments.
+photo: "team/juan-david-diaz.jpg"
+placeholder: false
+isPI: false
 order: 2
