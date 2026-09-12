@@ -1,6 +1,20 @@
 name: "Javier Dario Sanjuan De Caro"
 role: "Principal Investigator / Lab Director"
-bio: "Directs the Laboratorio de Mecatrónica y Robótica Aplicada at Universidad del Norte. Bio to be expanded -- add research background, degrees, and links here."
+bio: >-
+  Directs the Laboratorio de Mecatrónica y Robótica Aplicada at Universidad del Norte,
+  where he is an Associate Professor of Mechanical Engineering. Conducts research at the
+  intersection of robotics, control, and artificial intelligence, with a particular focus
+  on assistive robotics, robot learning, and the development of autonomous systems capable
+  of acquiring new skills through human demonstration. His research background includes
+  robot dynamics and control, kinematics, optimization, rehabilitation robotics, and
+  wheelchair-mounted robotic manipulators for activities of daily living.
+
+
+  Holds B.S. and M.S. degrees in Mechanical Engineering from Universidad del Norte and a
+  Ph.D. in Engineering from the University of Wisconsin–Milwaukee. His current research
+  explores learning from demonstration, intelligent robotic assistance, human–robot
+  interaction, and cooperative robotic systems for autonomous experimentation.
+photo: "team/javier-sanjuan.jpg"
 placeholder: false
 isPI: true
 order: 1

@@ -31,13 +31,25 @@ const base = import.meta.env.BASE_URL;
 
     <div class="mt-14 border-t border-[var(--color-line)] pt-10">
       <p class="eyebrow">Lab Director</p>
-      <h2 class="mt-3 font-display text-2xl font-medium text-[var(--color-ink)]">
-        Javier Darío Sanjuán De Caro
-      </h2>
-      <p class="mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-ink-soft)]">
-        Principal Investigator and Director of the Laboratorio de Mecatrónica y Robótica Aplicada.
-        Full academic background and CV to be added. See the <a class="text-[var(--color-accent-ink)] hover:underline" href={`${base}people/`}>People</a> page for the full team.
-      </p>
+      <div class="mt-3 flex items-start gap-4">
+        <img
+          src={`${base}team/javier-sanjuan.jpg`}
+          alt="Javier Darío Sanjuán De Caro"
+          class="h-16 w-16 shrink-0 rounded-full object-cover"
+          width="160"
+          height="160"
+        />
+        <div>
+          <h2 class="font-display text-2xl font-medium text-[var(--color-ink)]">
+            Javier Darío Sanjuán De Caro
+          </h2>
+          <p class="mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-ink-soft)]">
+            Principal Investigator and Director of the lab, and Associate Professor of Mechanical
+            Engineering at Universidad del Norte. Research spans assistive robotics, robot learning,
+            and human&ndash;robot interaction. See the <a class="text-[var(--color-accent-ink)] hover:underline" href={`${base}people/`}>People</a> page for the full bio.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

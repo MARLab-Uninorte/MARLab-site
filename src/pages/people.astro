@@ -21,6 +21,7 @@ const team = (await getCollection("team")).sort((a, b) => a.data.order - b.data.
           name={member.data.name}
           role={member.data.role}
           bio={member.data.bio}
+          photo={member.data.photo}
           isPI={member.data.isPI}
           placeholder={member.data.placeholder}
         />
