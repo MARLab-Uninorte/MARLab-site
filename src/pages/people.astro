@@ -4,7 +4,9 @@ import PageIntro from "../components/PageIntro.astro";
 import TeamCard from "../components/TeamCard.astro";
 import { getCollection } from "astro:content";
 
-const team = (await getCollection("team")).sort((a, b) => a.data.order - b.data.order);
+const allTeam = (await getCollection("team")).sort((a, b) => a.data.order - b.data.order);
+const team = allTeam.filter((member) => !member.data.alumni);
+const alumni = allTeam.filter((member) => member.data.alumni);
 ---
 
 <BaseLayout title="People" description="Meet the team of the Laboratorio de Mecatrónica y Robótica Aplicada.">
@@ -27,5 +29,26 @@ const team = (await getCollection("team")).sort((a, b) => a.data.order - b.data.
         />
       ))}
     </div>
+
+    {alumni.length > 0 && (
+      <div class="mt-16 border-t border-[var(--color-line)] pt-12">
+        <p class="eyebrow">Alumni</p>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-ink-soft)]">
+          Former members of the lab who have since graduated.
+        </p>
+        <div class="mt-6 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {alumni.map((member) => (
+            <TeamCard
+              name={member.data.name}
+              role={member.data.role}
+              bio={member.data.bio}
+              photo={member.data.photo}
+              isPI={member.data.isPI}
+              placeholder={member.data.placeholder}
+            />
+          ))}
+        </div>
+      </div>
+    )}
   </section>
 </BaseLayout>

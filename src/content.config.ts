@@ -21,6 +21,7 @@ const team = defineCollection({
     photo: z.string().optional(),
     isPI: z.boolean().default(false),
     placeholder: z.boolean().default(false),
+    alumni: z.boolean().default(false),
     order: z.number().default(0),
   }),
 });
