@@ -1,5 +1,12 @@
-name: "Team Member 5"
-role: "Role to be announced"
-bio: "Profile coming soon. This seat is reserved for an upcoming team member -- replace this file's fields with their name, role, and bio once confirmed."
-placeholder: true
+name: "Jose Castillo"
+role: "Ph.D. Student, Mechanical Engineering"
+bio: >-
+  Jose Castillo is a Mechanical Engineer, holds a Master's in Mechanical Engineering,
+  and is currently a Ph.D. student in Mechanical Engineering. His work focuses on
+  mechatronics, robotics, mechanical design, and rehabilitation technologies for the
+  lower limbs. He has experience in university and school teaching, combining
+  theoretical knowledge with practical projects and technology-based learning.
+photo: "team/jose-castillo.jpg"
+placeholder: false
+isPI: false
 order: 5
