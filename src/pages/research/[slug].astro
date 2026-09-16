@@ -53,9 +53,33 @@ const projects = allProjects
               <p class="mt-2 text-[1rem] leading-relaxed text-[var(--color-ink-soft)]">
                 {project.data.summary}
               </p>
+
+              {project.data.photo && (
+                <img
+                  src={`${base}${project.data.photo}`}
+                  alt={project.data.title}
+                  class="mt-6 w-full border border-[var(--color-line)] object-cover"
+                  loading="lazy"
+                />
+              )}
+
               <div class="mt-4 space-y-3 text-sm leading-relaxed text-[var(--color-ink-soft)]">
                 {paragraphs.map((p) => <p>{p}</p>)}
               </div>
+
+              {project.data.video && (
+                <div class="mt-6 max-w-xs">
+                  <video
+                    src={`${base}${project.data.video}`}
+                    controls
+                    preload="metadata"
+                    class="w-full border border-[var(--color-line)]"
+                  >
+                  </video>
+                  <p class="mt-2 text-xs text-[var(--color-ink-faint)]">Force-capability test on the lab prototype.</p>
+                </div>
+              )}
+
               {project.data.contributors.length > 0 && (
                 <p class="mt-5 text-sm text-[var(--color-ink-faint)]">
                   Contributors:{" "}

@@ -1,19 +1,35 @@
 title: "Delta Robot for Selective Weed Control in Rice Crops"
 line: "agriculture"
 status: "Ongoing"
-summary: "Design and optimization of a Delta parallel robot for selective weed control in rice crops."
+summary: "Design, optimization, and experimental validation of a Delta parallel robot for selective, mechanical weed extraction in rice crops."
 description: >-
   This project designs and optimizes a Delta parallel robot for selective weed
   control in rice crops, adapted to the agro-industrial conditions of Colombia's
-  Caribbean region. The work combines mechanical design and optimization to develop
-  a platform capable of targeting weeds with the precision needed to reduce
-  herbicide use in the field.
+  Caribbean region. The goal is mechanical weed extraction during the early
+  post-emergence window (7-15 day old rice), uprooting weeds such as Cyperus
+  rotundus and Ischaemum rugosum while avoiding contact with the surrounding rice
+  plants.
 
 
-  The project explores how mechanical design, optimization, and automation can be
-  integrated to produce more efficient and sustainable agricultural technologies,
-  building toward autonomous platforms for crop monitoring and field data
-  collection.
+  The robot's geometry was optimized analytically: the reachable workspace is
+  formulated as the intersection of three tori, and a Scatter Search algorithm
+  maximizes the largest cylindrical operating region that satisfies the required
+  8 N extraction force and the actuators' torque limits. The optimized design
+  (upper-arm length 287.8 mm, lower-arm length 431.7 mm, base radius 229.4 mm,
+  platform radius 108.2 mm) yields a usable cylindrical workspace of about 400 mm
+  in diameter and 320 mm in height, matched to the spacing between rice planting
+  sites.
+
+
+  A laboratory prototype was built with a big-claw gripper and Bluetooth-controlled
+  end effector, and validated through three experiments: positioning accuracy
+  (mean absolute error of 8.5 mm across the workspace), pulling-force trials with a
+  handheld dynamometer (mean peak force of 9.7 N against the 8 N target, met in
+  about 80% of trials), and extraction tests on real weed species in an artificial
+  rice-crop bed, which confirmed the prototype can uproot weeds without damaging
+  the simulated crop.
 contributors:
   - "Isamar Paola Sampayo Gómez"
+photo: "projects/delta-robot.jpg"
+video: "projects/delta-robot-force-test.mp4"
 order: 1
