@@ -55,12 +55,19 @@ const projects = allProjects
               </p>
 
               {project.data.photo && (
-                <img
-                  src={`${base}${project.data.photo}`}
-                  alt={project.data.title}
-                  class="mt-6 w-full border border-[var(--color-line)] object-cover"
-                  loading="lazy"
-                />
+                <figure class="mt-6">
+                  <img
+                    src={`${base}${project.data.photo}`}
+                    alt={project.data.title}
+                    class="w-full border border-[var(--color-line)] object-cover"
+                    loading="lazy"
+                  />
+                  {project.data.photoCaption && (
+                    <figcaption class="mt-2 text-xs text-[var(--color-ink-faint)]">
+                      {project.data.photoCaption}
+                    </figcaption>
+                  )}
+                </figure>
               )}
 
               <div class="mt-4 space-y-3 text-sm leading-relaxed text-[var(--color-ink-soft)]">
@@ -80,8 +87,21 @@ const projects = allProjects
                 </div>
               )}
 
+              {project.data.link && (
+                <p class="mt-5">
+                  <a
+                    href={project.data.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)] hover:underline"
+                  >
+                    {project.data.link.label} →
+                  </a>
+                </p>
+              )}
+
               {project.data.contributors.length > 0 && (
-                <p class="mt-5 text-sm text-[var(--color-ink-faint)]">
+                <p class="mt-3 text-sm text-[var(--color-ink-faint)]">
                   Contributors:{" "}
                   <a href={`${base}people/`} class="text-[var(--color-accent-ink)] hover:underline">
                     {project.data.contributors.join(", ")}

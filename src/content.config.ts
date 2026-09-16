@@ -23,7 +23,9 @@ const projects = defineCollection({
     description: z.string(),
     contributors: z.array(z.string()).default([]),
     photo: z.string().optional(),
+    photoCaption: z.string().optional(),
     video: z.string().optional(),
+    link: z.object({ label: z.string(), href: z.string() }).optional(),
     order: z.number().default(0),
   }),
 });

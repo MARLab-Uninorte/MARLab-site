@@ -10,4 +10,7 @@ photo: "team/enso-jimenez.jpg"
 placeholder: false
 isPI: false
 alumni: true
+links:
+  - label: "Reference Values for Running Biomechanics in Recreational Runners"
+    href: "research/biomedical/#04-running-biomechanics"
 order: 1

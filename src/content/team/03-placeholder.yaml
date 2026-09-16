@@ -19,4 +19,7 @@ bio: >-
 photo: "team/otto-sierra.jpg"
 placeholder: false
 isPI: false
+links:
+  - label: "Reference Values for Running Biomechanics in Recreational Runners"
+    href: "research/biomedical/#04-running-biomechanics"
 order: 3

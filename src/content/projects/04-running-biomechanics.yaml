@@ -1,0 +1,44 @@
+title: "Reference Values for Running Biomechanics in Recreational Runners"
+line: "biomedical"
+status: "Published"
+summary: "Preliminary regional reference database of spatiotemporal and kinematic running parameters for healthy adult recreational runners, built with 3D motion capture."
+description: >-
+  Running-related injuries are common among recreational runners, but clinical and
+  sports biomechanics has historically relied on reference values drawn from North
+  American, European, or Australian cohorts, leaving Latin American and Caribbean
+  runners without population-specific benchmarks. This project addresses that gap
+  for recreational runners from Barranquilla, Colombia.
+
+
+  Twenty-five healthy adult recreational runners (13 men, 12 women, ages 20-47) were
+  assessed with a BTS SMART-DX three-dimensional motion capture system and a
+  30-marker Modified Helen Hayes model while running on a treadmill at 7, 9, 11, and
+  13 km/h. Spatiotemporal variables (stance and flight time, stride length, cadence),
+  kinematic variables (initial contact angle, vertical oscillation), and a
+  model-derived kinetic variable (vertical leg stiffness) were extracted and
+  stratified by sex and running speed into 10th-90th percentile reference intervals.
+
+
+  Running speed significantly affected all ten evaluated biomechanical variables.
+  Compared with a published European reference cohort, and after adjusting for sex,
+  age, stature, body mass, and speed, this Barranquilla cohort showed a 6.6% shorter
+  flight time, a 19.0% lower vertical oscillation, a 3.8% shorter stride length, and
+  a 3.1% higher cadence, supporting the value of population-specific reference data
+  for clinical interpretation.
+
+
+  The result is the first regional reference database for running biomechanics in
+  this population, intended to support biomechanical screening, rehabilitation
+  monitoring, and future work on wearable sensing and machine-learning applications
+  in gait analysis. The project was completed as Enso Jiménez's master's thesis, in
+  collaboration with Universidad Simón Bolívar and Universidad del Norte.
+contributors:
+  - "Enso Jovanis Jiménez Turizo"
+  - "Otto Alfonso Sierra Meléndez"
+  - "Javier Dario Sanjuan De Caro"
+photo: "projects/running-biomechanics-markers.jpg"
+photoCaption: "Standardized 30-marker set used for 3D motion capture during the study. Figure from Jiménez et al. (2026), J. Funct. Morphol. Kinesiol., used under CC BY 4.0."
+link:
+  label: "Read the paper (open access)"
+  href: "https://doi.org/10.3390/jfmk11030350"
+order: 2
