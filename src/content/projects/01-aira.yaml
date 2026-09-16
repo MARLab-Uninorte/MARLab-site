@@ -1,0 +1,30 @@
+title: "AIRA — Assistive Robotic Manipulator"
+line: "biomedical"
+status: "Ongoing"
+summary: "A seven-degree-of-freedom robotic manipulator designed and manufactured at Universidad del Norte for assistive applications."
+description: >-
+  AIRA is a seven-degree-of-freedom robotic manipulator designed and manufactured at
+  Universidad del Norte to support assistive applications, including activities of
+  daily living for people with limited mobility. The project spans the full
+  mechatronics stack, from mechanical design and digital modeling to control and
+  autonomous manipulation.
+
+
+  Work on AIRA includes a complete URDF-based digital twin built from the robot's CAD
+  assembly and actuator specifications, integrated into the Drake robotics framework
+  for forward-kinematics validation and pick-and-place experimentation; a
+  kinematic control algorithm using optimization-based inverse kinematics with
+  safety constraints for real-time operation; and finite element and dynamic
+  analysis, including acceleration and torque calculations, to validate the design
+  ahead of the construction and assembly phase.
+
+
+  A parallel research thread is exploring learning from demonstration and behavior
+  cloning for physical manipulation, following a PRISMA-ScR scoping methodology, to
+  inform future learning-based control experiments on the AIRA platform.
+contributors:
+  - "Javier Dario Sanjuan De Caro"
+  - "Otto Alfonso Sierra Meléndez"
+  - "Ricardo Adolfo Caraballo Ibarra"
+  - "Isamar Paola Sampayo Gómez"
+order: 1

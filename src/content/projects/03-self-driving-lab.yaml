@@ -1,0 +1,18 @@
+title: "Robotic Manipulation for Self-Driving Laboratories"
+line: "automation"
+status: "Ongoing"
+summary: "Autonomous robotic manipulation that lets a robot perform experimental tasks that traditionally require a human, starting with twisting-lid actions."
+description: >-
+  This project studies how robotic systems can autonomously perform experimental
+  tasks that traditionally require human intervention, as part of the lab's work on
+  self-driving laboratories. The research focuses on robotic manipulation using
+  robotic arms, with the goal of enabling a robot to reliably perform twisting-lid
+  tasks such as opening and closing threaded caps.
+
+
+  The work combines mechanical design, Python-based control and data analysis, and
+  simulation tools to move from early prototypes toward more automated,
+  reproducible, and adaptable experimental processes in laboratory environments.
+contributors:
+  - "Juan David Díaz Fernández"
+order: 1

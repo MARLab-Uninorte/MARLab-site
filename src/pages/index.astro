@@ -86,7 +86,7 @@ const research = (await getCollection("research")).sort((a, b) => a.data.order -
       </div>
       <div class="mt-10 grid gap-5 md:grid-cols-3">
         {research.map((r, i) => (
-          <ResearchCard tag={r.data.tag} title={r.data.title} text={r.data.summary} index={i + 1} href={`${base}research/`} />
+          <ResearchCard tag={r.data.tag} title={r.data.title} text={r.data.summary} index={i + 1} href={`${base}research/${r.data.slug}/`} />
         ))}
       </div>
     </div>

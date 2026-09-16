@@ -6,8 +6,22 @@ const research = defineCollection({
   schema: z.object({
     title: z.string(),
     tag: z.string(),
+    slug: z.string(),
     summary: z.string(),
     description: z.string(),
+    order: z.number().default(0),
+  }),
+});
+
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(),
+    line: z.string(),
+    status: z.string().default("Ongoing"),
+    summary: z.string(),
+    description: z.string(),
+    contributors: z.array(z.string()).default([]),
     order: z.number().default(0),
   }),
 });
@@ -49,4 +63,4 @@ const software = defineCollection({
   }),
 });
 
-export const collections = { research, team, publications, software };
+export const collections = { research, team, publications, software, projects };

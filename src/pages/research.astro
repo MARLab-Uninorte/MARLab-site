@@ -4,6 +4,7 @@ import PageIntro from "../components/PageIntro.astro";
 import { getCollection } from "astro:content";
 
 const research = (await getCollection("research")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Research" description="Research lines of the Laboratorio de Mecatrónica y Robótica Aplicada: biomedical, agricultural, and applied robotics.">
@@ -22,8 +23,16 @@ const research = (await getCollection("research")).sort((a, b) => a.data.order -
             <span class="eyebrow">{r.data.tag}</span>
           </div>
           <div class="max-w-2xl">
-            <h2 class="font-display text-2xl font-medium text-[var(--color-ink)]">{r.data.title}</h2>
+            <a href={`${base}research/${r.data.slug}/`} class="group inline-flex items-center gap-2 no-underline">
+              <h2 class="font-display text-2xl font-medium text-[var(--color-ink)] group-hover:underline">{r.data.title}</h2>
+            </a>
             <p class="mt-3 text-[1rem] leading-relaxed text-[var(--color-ink-soft)]">{r.data.description}</p>
+            <a
+              href={`${base}research/${r.data.slug}/`}
+              class="mt-4 inline-block font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)] hover:underline"
+            >
+              View projects →
+            </a>
           </div>
         </article>
       ))}

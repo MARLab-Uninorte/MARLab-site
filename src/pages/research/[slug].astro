@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const research = await getCollection("research");
+  return research.map((r) => ({
+    params: { slug: r.data.slug },
+    props: { research: r },
+  }));
+}
+
+const { research } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const allProjects = await getCollection("projects");
+const projects = allProjects
+  .filter((p) => p.data.line === research.data.slug)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title={research.data.title}
+  description={research.data.description}
+>
+  <PageIntro
+    eyebrow={`Research Areas / ${research.data.tag}`}
+    title={research.data.title}
+    intro={research.data.description}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16 md:py-20">
+    <a
+      href={`${base}research/`}
+      class="font-mono text-xs uppercase tracking-wide text-[var(--color-accent-ink)] hover:underline"
+    >
+      ← All research areas
+    </a>
+
+    <div class="mt-10 flex flex-col divide-y divide-[var(--color-line)]">
+      {projects.length > 0 ? (
+        projects.map((project) => {
+          const paragraphs = project.data.description.split(/\n{2,}/);
+          return (
+            <article class="py-10 first:pt-0">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="eyebrow">{project.data.status}</span>
+              </div>
+              <h2 class="mt-3 font-display text-2xl font-medium text-[var(--color-ink)]">
+                {project.data.title}
+              </h2>
+              <p class="mt-2 text-[1rem] leading-relaxed text-[var(--color-ink-soft)]">
+                {project.data.summary}
+              </p>
+              <div class="mt-4 space-y-3 text-sm leading-relaxed text-[var(--color-ink-soft)]">
+                {paragraphs.map((p) => <p>{p}</p>)}
+              </div>
+              {project.data.contributors.length > 0 && (
+                <p class="mt-5 text-sm text-[var(--color-ink-faint)]">
+                  Contributors:{" "}
+                  <a href={`${base}people/`} class="text-[var(--color-accent-ink)] hover:underline">
+                    {project.data.contributors.join(", ")}
+                  </a>
+                </p>
+              )}
+            </article>
+          );
+        })
+      ) : (
+        <div class="border border-dashed border-[var(--color-ink-faint)] px-6 py-10 text-center">
+          <p class="text-sm text-[var(--color-ink-soft)]">
+            No public project write-ups for this line yet — check back soon.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
