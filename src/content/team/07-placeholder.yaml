@@ -24,4 +24,7 @@ photo: "team/isamar-sampayo.jpg"
 placeholder: false
 isPI: false
 alumni: false
+links:
+  - label: "Delta Robot for Selective Weed Control in Rice Crops"
+    href: "research/agriculture/#02-delta-weed-control"
 order: 6

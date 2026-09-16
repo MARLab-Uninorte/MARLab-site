@@ -38,6 +38,7 @@ const team = defineCollection({
     isPI: z.boolean().default(false),
     placeholder: z.boolean().default(false),
     alumni: z.boolean().default(false),
+    links: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
     order: z.number().default(0),
   }),
 });

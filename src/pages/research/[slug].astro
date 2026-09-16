@@ -43,7 +43,7 @@ const projects = allProjects
         projects.map((project) => {
           const paragraphs = project.data.description.split(/\n{2,}/);
           return (
-            <article class="py-10 first:pt-0">
+            <article id={project.id} class="scroll-mt-24 py-10 first:pt-0">
               <div class="flex flex-wrap items-center gap-3">
                 <span class="eyebrow">{project.data.status}</span>
               </div>
