@@ -22,9 +22,21 @@ description: >-
   A parallel research thread is exploring learning from demonstration and behavior
   cloning for physical manipulation, following a PRISMA-ScR scoping methodology, to
   inform future learning-based control experiments on the AIRA platform.
+
+
+  On the hardware side, AIRA's actuation and electrical systems are built around
+  CAN bus control of its MyActuator RH-series actuators, with custom C++ libraries
+  implementing position, velocity, and torque control, and communication software
+  linking the physical motors to the Drake simulation through a two-degree-of-freedom
+  digital twin. The robot's power distribution is handled by purpose-built power
+  panels with circuit breakers and contactors for safety. Current work is training a
+  behavior-cloning pouring policy for non-Newtonian fluids, aimed at eventually
+  letting AIRA autonomously prepare cement mixtures as part of the lab's
+  self-driving laboratories effort.
 contributors:
   - "Javier Dario Sanjuan De Caro"
   - "Otto Alfonso Sierra Meléndez"
   - "Ricardo Adolfo Caraballo Ibarra"
   - "Isamar Paola Sampayo Gómez"
+  - "Jaime A. Besada"
 order: 1

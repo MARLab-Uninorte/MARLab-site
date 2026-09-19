@@ -1,0 +1,38 @@
+name: "Jaime A. Besada"
+role: "M.S. Student, Mechanical Engineering / Undergraduate Student, Electrical Engineering"
+bio: >-
+  Jaime A. Besada is a Mechanical Engineer currently pursuing an M.S. in Mechanical
+  Engineering, while also completing a second undergraduate degree in Electronic
+  Engineering. His background combines mechanical design, control systems,
+  electronics, and automation, supported by C++ and Python programming, simulation
+  tools such as Drake and MuJoCo, and SOLIDWORKS professional certifications. As an
+  undergraduate, he led the design and manufacturing of a semi-automatic steel bar
+  bending machine for an industrial partner, aimed at reducing manufacturing times
+  at low cost, which was recognized as the Best Mechanical Engineering Project at
+  Universidad del Norte.
+
+
+  Within MARLab, he works on the actuation and electrical systems of AIRA, the lab's
+  seven-degree-of-freedom robotic manipulator. He is responsible for CAN bus control
+  of the MyActuator RH-series actuators, developing C++ libraries that implement
+  position, velocity, and torque control. He also works on the communication
+  software that links the physical motors with AIRA's simulation in Drake,
+  including a two-degree-of-freedom digital twin that integrates simulation with
+  real hardware. In addition, he leads the robot's power distribution, designing and
+  assembling power panels built specifically for the 7-DoF platform, incorporating
+  safety-oriented protection elements such as circuit breakers and contactors.
+
+
+  His master's research focuses on learning from demonstration for AIRA, using
+  behavior cloning to train a pouring policy for non-Newtonian fluids. This work is
+  part of a broader effort toward self-driving laboratories, with the goal of
+  enabling AIRA to autonomously prepare cement mixtures within an intelligent
+  laboratory environment.
+photo: "team/jaime-besada.jpg"
+placeholder: false
+isPI: false
+alumni: false
+links:
+  - label: "AIRA — Assistive Robotic Manipulator"
+    href: "research/biomedical/#01-aira"
+order: 8
