@@ -1,0 +1,23 @@
+name: "Julio Andrés Cataño Villa"
+role: "Industrial Design Student — Technical Draftsman"
+bio: >-
+  Julio Andrés is studying Industrial Design at Universidad del Norte, where he
+  specializes as a Technical Draftsman in the design of CNC-manufacturable
+  mechanical components, combining technical drawing, parametric 3D modeling, and
+  prototyping skills.
+
+
+  For the AIRA project, he was tasked with designing an assistive robotic arm for
+  people with limited mobility, developing the manipulator's organic design concept
+  alongside its mechanical, functional, and component-layout requirements. His work
+  included technical drawing and parametric 3D modeling of the arm's components, as
+  well as prototyping and functional validation to ensure the design was both
+  manufacturable and aesthetically coherent.
+photo: "team/julio-catano.jpg"
+placeholder: false
+isPI: false
+alumni: false
+links:
+  - label: "AIRA — Assistive Robotic Manipulator"
+    href: "research/biomedical/#01-aira"
+order: 11

@@ -33,10 +33,20 @@ description: >-
   behavior-cloning pouring policy for non-Newtonian fluids, aimed at eventually
   letting AIRA autonomously prepare cement mixtures as part of the lab's
   self-driving laboratories effort.
+
+
+  AIRA's industrial design — the organic form of the robotic arm itself — was
+  developed to meet the mechanical, functional, and component-layout requirements of
+  an assistive manipulator for people with limited mobility. This work included
+  technical drawing and parametric 3D modeling of the arm's components, designed to
+  be manufacturable on CNC equipment, followed by prototyping and functional
+  validation to confirm that the design was both manufacturable and aesthetically
+  coherent.
 contributors:
   - "Javier Dario Sanjuan De Caro"
   - "Otto Alfonso Sierra Meléndez"
   - "Ricardo Adolfo Caraballo Ibarra"
   - "Isamar Paola Sampayo Gómez"
   - "Jaime A. Besada"
+  - "Julio Andrés Cataño Villa"
 order: 1
